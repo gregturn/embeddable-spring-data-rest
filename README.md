@@ -3,6 +3,8 @@ embeddable-spring-data-rest
 
 An example of using Spring Data REST with an embeddable subtable
 
+> **NOTE:** You HAVE to use Spring Data REST 2.1.0.RC1 for this to work properly. 2.0.x doesn't handle @Embeddable propertly. As a side effect, it's also recommend to upgrade Spring Data JPA to 1.6.0.RC1
+
 Run it by launching `mvn clean spring-boot:run`.
 
 To poke at the sample data, in another shell, use `curl`.
