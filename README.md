@@ -27,7 +27,7 @@ $ curl localhost:8080/systems/1
 ```
 
 ```
-$ curl X PATCH -H "Content-type:application/json" -d '{ "dependencies" : [{"description":"MUX", "target": "http://localhost:8080/systems/1"}]}' localhost:8080/systems/1
+$ curl -X PATCH -H "Content-type:application/json" -d '{ "dependencies" : [{"description":"MUX", "target": "http://localhost:8080/systems/1"}]}' localhost:8080/systems/1
 $ curl localhost:8080/systems/1
 {
   "name" : "router101",
