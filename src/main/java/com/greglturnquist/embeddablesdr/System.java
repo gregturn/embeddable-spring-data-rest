@@ -24,23 +24,22 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import java.util.List;
 
-@Entity(name="T_SYSTEM")
+@Entity(name = "T_SYSTEM")
 public class System {
 
-	@Id @GeneratedValue
-	@Column(name="SYSTEM_ID")
+	@Id
+	@GeneratedValue
+	@Column(name = "SYSTEM_ID")
 	private Long id;
 
-	@Column(unique=true,nullable=false)
+	@Column(unique = true, nullable = false)
 	private String name;
 
 	@ElementCollection
 	@CollectionTable(
-
-			name="T_SYSTEM_DEPENDENCY",
-
-			joinColumns=@JoinColumn(name="SYSTEM_ID",nullable=false))
-
+		name = "T_SYSTEM_DEPENDENCY",
+		joinColumns = @JoinColumn(name = "SYSTEM_ID", nullable = false)
+	)
 	private List<SystemDependency> dependencies;
 
 	public Long getId() {

@@ -52,17 +52,17 @@ public class Application {
 		system2 = repository.save(system2);
 
 		SystemDependency dep1 = new SystemDependency();
-        dep1.setDescription("WLAN");
-        dep1.setTarget(system1);
+		dep1.setDescription("WLAN");
+		dep1.setTarget(system1);
 
-        SystemDependency dep2 = new SystemDependency();
-        dep2.setDescription("UPS");
-        dep2.setTarget(system1);
+		SystemDependency dep2 = new SystemDependency();
+		dep2.setDescription("UPS");
+		dep2.setTarget(system1);
 
 		ArrayList<SystemDependency> dependencies1 = new ArrayList<>();
-        dependencies1.add(dep1);
-        dependencies1.add(dep2);
-        system1.setDependencies(dependencies1);
+		dependencies1.add(dep1);
+		dependencies1.add(dep2);
+		system1.setDependencies(dependencies1);
 
 		system1 = repository.save(system1);
 

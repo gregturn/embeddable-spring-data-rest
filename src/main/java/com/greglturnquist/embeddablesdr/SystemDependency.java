@@ -24,8 +24,8 @@ import javax.persistence.OneToOne;
 @Embeddable
 public class SystemDependency {
 
-	@OneToOne(cascade= CascadeType.PERSIST)
-	@JoinColumn(name="TARGET_SYSTEM_ID", nullable=false)
+	@OneToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name = "TARGET_SYSTEM_ID", nullable = false)
 	private System target;
 
 	@Column
