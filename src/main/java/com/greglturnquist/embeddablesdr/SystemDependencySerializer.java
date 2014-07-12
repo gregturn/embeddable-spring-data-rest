@@ -34,7 +34,7 @@ public class SystemDependencySerializer extends StdSerializer<SystemDependency> 
 		jgen.writeStringField("description", systemDependency.getDescription());
 		jgen.writeObjectFieldStart("_links");
 		jgen.writeObjectFieldStart("target");
-		jgen.writeStringField("href", "/path/to/" + systemDependency.getTarget().getId());
+		jgen.writeStringField("href", link.getHref());
 		jgen.writeEndObject();
 		jgen.writeEndObject();
 		jgen.writeEndObject();

@@ -32,9 +32,9 @@ public class Application {
 		system1.setName("router101");
 		system1 = repository.save(system1);
 
-//		System system2 = new System();
-//		system2.setName("switch405");
-//		system2 = repository.save(system2);
+		System system2 = new System();
+		system2.setName("switch405");
+		system2 = repository.save(system2);
 
 		SystemDependency dep1 = new SystemDependency();
         dep1.setDescription("WLAN");
@@ -50,6 +50,22 @@ public class Application {
         system1.setDependencies(dependencies1);
 
 		system1 = repository.save(system1);
+
+		SystemDependency dep3 = new SystemDependency();
+		dep3.setDescription("MUX");
+		dep3.setTarget(system1);
+
+		SystemDependency dep4 = new SystemDependency();
+		dep4.setDescription("Backup Battery");
+		dep4.setTarget(system2);
+
+		ArrayList<SystemDependency> dependencies2 = new ArrayList<>();
+		dependencies2.add(dep3);
+		dependencies2.add(dep4);
+		system2.setDependencies(dependencies2);
+
+		system2 = repository.save(system2);
+
 	}
 
 }
